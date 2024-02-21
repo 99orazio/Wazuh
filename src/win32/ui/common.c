@@ -199,13 +199,13 @@ int config_read(__attribute__((unused)) HWND hwnd)
     /* Get version/revision */
 
     if (tmp_str = cat_file(VERSION_FILE, NULL), tmp_str) {
-        snprintf(buffer, sizeof(buffer), "Wazuh %s", tmp_str);
+        snprintf(buffer, sizeof(buffer), "Information");
         os_strdup(buffer, config_inst.version);
     }
 
     free(tmp_str);
     if (tmp_str = cat_file(REVISION_FILE, NULL), tmp_str) {
-        snprintf(buffer, sizeof(buffer), "Revision %s", tmp_str);
+        snprintf(buffer, sizeof(buffer), "");
         os_strdup(buffer, config_inst.revision);
     }
 
